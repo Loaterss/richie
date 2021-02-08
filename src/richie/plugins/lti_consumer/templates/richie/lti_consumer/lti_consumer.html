@@ -1,0 +1,28 @@
+<form
+    id="lti_form"
+    action="{{ instance.url }}"
+    method="POST"
+    encType="application/x-www-form-urlencoded"
+    style="display:none;"
+    target="lti_iframe"
+>
+  {% for key, value in instance.content_parameters.items %}
+    <input type="hidden" name="{{ key }}" value="{{ value }}"/>
+  {% endfor %}
+  <button type="submit">Consume LTI</button>
+</form>
+
+<iframe
+    name="lti_iframe"
+    src="{{ instance.url }}"
+    allow="microphone *; camera *; midi *; geolocation *; encrypted-media *"
+></iframe>
+
+<script type="text/javascript">
+  (function (d) {
+    const lti_form = d.getElementById("lti_form");
+    if (lti_form) {
+      lti_form.submit();
+    }
+  }(document));
+</script>

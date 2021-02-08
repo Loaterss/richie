@@ -8,6 +8,11 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unrealeased]
 
+### Added
+
+- Add new plugin "LTI consumer" to include marsha videos in course_teaser 
+  placeholder.
+
 ## [2.1.0] - 2021-01-22
 
 ### Added

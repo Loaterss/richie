@@ -312,6 +312,21 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
         default="richie", environ_name="RICHIE_ES_INDICES_PREFIX", environ_prefix=None
     )
 
+    # Marsha
+    LTI_CONSUMER_SECRETS = {
+        "marsha": {
+            "oauth_consumer_key": "InsecureOauthConsumerKey",
+            "shared_secret": "InsecureSharedSecret",
+        }
+    }
+    LTI_CONSUMER = {
+        "display_name": "Marsha Video",
+        "base_url": values.Value(environ_name="MARSHA_BASE_URL", environ_prefix=None),
+        "is_launch_url_regex": True,
+        "automatic_resizing": True,
+        "inline_ratio": 0.5625,
+    }
+
     # Internationalization
     TIME_ZONE = "Europe/Paris"
     USE_I18N = True
@@ -384,6 +399,7 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
         "richie.plugins.section",
         "richie.plugins.simple_picture",
         "richie.plugins.simple_text_ckeditor",
+        "richie.plugins.lti_consumer",
         "richie",
         # Third party apps
         "dj_pagination",

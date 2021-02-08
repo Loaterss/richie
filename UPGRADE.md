@@ -16,6 +16,8 @@ $ make migrate
 
 ## Unreleased
 
+- New `MARSHA_BASE_URL` setting added to set marsha host used in the new LTI consumer plugin
+
 ## 2.0.x to 2.1.x
 - `RICHIE_AUTHENTICATION_DELEGATION["PROFILE_URLS"]` setting is now a dictionary : a key has been
   added to each url, permitting to get one easily.

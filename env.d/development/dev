@@ -5,3 +5,6 @@ AUTHENTICATION_BACKEND=base
 # LMS Backend
 EDX_BASE_URL=http://localhost:8073
 EDX_BACKEND=richie.apps.courses.lms.base.BaseLMSBackend
+
+# LTI Backend
+MARSHA_BASE_URL=http://localhost:8060

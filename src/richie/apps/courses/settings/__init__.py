@@ -128,8 +128,8 @@ CMS_PLACEHOLDER_CONF = {
     },
     "courses/cms/course_detail.html course_teaser": {
         "name": _("Teaser"),
-        "plugins": ["VideoPlayerPlugin", "SimplePicturePlugin"],
-        "limits": {"VideoPlayerPlugin": 1, "SimplePicturePlugin": 1},
+        "plugins": ["LTIConsumerPlugin", "SimplePicturePlugin"],
+        "limits": {"LTIConsumerPlugin": 1, "SimplePicturePlugin": 1},
     },
     "courses/cms/course_detail.html course_description": {
         "name": _("About the course"),
@@ -504,3 +504,10 @@ RICHIE_SIMPLEPICTURE_PRESETS = {
         "sizes": "60px",
     },
 }
+
+LTI_CONSUMER_CONFIGURATION = [
+    {
+        "placeholders": ["course_teaser"],
+        "url_regex": "/lti/videos/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+    },
+]
